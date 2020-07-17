@@ -8,6 +8,7 @@ import { ContentComponent } from './ui/content/content.component';
 import { FooterComponent } from './ui/footer/footer.component';
 import { SidebarComponent } from './ui/sidebar/sidebar.component';
 import { TopbarComponent } from './ui/topbar/topbar.component';
+import { CompanyManagementModule } from './company-management/company-management.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { TopbarComponent } from './ui/topbar/topbar.component';
     BrowserModule,
     AppRoutingModule,
     EmployeesModule,
+    CompanyManagementModule,
     // SidebarComponent
   ],
   providers: [],
