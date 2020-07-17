@@ -22,47 +22,22 @@
       <!-- Divider -->
       <hr class="sidebar-divider">
 
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Order Management
-      </div>
-
      <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSales" aria-expanded="true" aria-controls="collapseSales">
           <i class="fas fa-fw fa-cog"></i>
-          <span>Sales Order</span>
+          <span>Order Management</span>
         </a>
         <div id="collapseSales" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="sales-quotations.html">Quotation</a>
-            <a class="collapse-item" href="sales-order.html">Sales Order</a>
-             <a class="collapse-item" href="customer_list.html">Customer</a>
-              <a class="collapse-item" href="cards.html">Outgoing Shipment</a>
+            <a class="collapse-item" routerLink="/ordermgr/listQuotation">Quotation</a>
+            <a class="collapse-item" routerLink="/ordermgr/listSalesOrder">Sales Order</a>
+            <a class="collapse-item" routerLink="/ordermgr/listCustomer">Customer</a>
+            <a class="collapse-item" routerLink="/ordermgr/listPurchaseQuotation">Request for Quotation</a>
+            <a class="collapse-item" routerLink="/ordermgr/listPurchaseOrder">Purchase Order</a>
+            <a class="collapse-item" routerLink="/ordermgr/listVendor">Supplier/Vendor</a>
           </div>
         </div>
       </li>
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePurchase" aria-expanded="true" aria-controls="collapsePurchase">
-          <i class="fas fa-fw fa-cog"></i>
-          <span>Purchase Order</span>
-        </a>
-        <div id="collapsePurchase" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="purchase-quotations.html">Quotation</a>
-            <a class="collapse-item" href="purchase-order.html">Purchase Order</a>
-             <a class="collapse-item" href="vendor_list.html">Supplier/Vendor</a>
-              <a class="collapse-item" href="cards.html">Incomming Shipment</a>
-          </div>
-        </div>
-      </li>
-
-      <hr class="sidebar-divider">
-
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Catalog Management
-      </div>
 
      <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProduct" aria-expanded="true" aria-controls="collapseProduct">
@@ -71,19 +46,14 @@
         </a>
         <div id="collapseProduct" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="catalog.html">Catalog</a>
-            <a class="collapse-item " href="category.html">Category</a>
-            <a class="collapse-item" href="product.html">Product</a>
-            <a class="collapse-item" href="product_attribute.html">Product Attribute</a>
-             <a class="collapse-item" href="uom.html">Unit Of Measure</a>
+            <a class="collapse-item" routerLink="/products/listCatalog">Catalog</a>
+            <a class="collapse-item " routerLink="/products/listCategory">Category</a>
+            <a class="collapse-item" routerLink="/products/listProduct">Product</a>
+            <a class="collapse-item" routerLink="/products/listAttributes">Product Attribute</a>
+             <a class="collapse-item" routerLink="/products/listUOM">Unit Of Measure</a>
           </div>
         </div>
       </li>
-
- <hr class="sidebar-divider">
-     <div class="sidebar-heading">
-        Inventory Management
-      </div>
 
      <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCompany" aria-expanded="true" aria-controls="collapseCompany">
@@ -113,12 +83,6 @@
         </div>
       </li>
 
-
-   <hr class="sidebar-divider">
-     <div class="sidebar-heading">
-        Human Resource
-      </div>
-
      <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEmployee" aria-expanded="true" aria-controls="collapseEmployee">
           <i class="fas fa-fw fa-cog"></i>
@@ -126,17 +90,11 @@
         </a>
         <div id="collapseEmployee" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item active" routerLink="/listEmployee">Employee</a>
+            <a class="collapse-item active" routerLink="/employees">Employee</a>
             <a class="collapse-item" href="#">Designation</a>
           </div>
         </div>
       </li>
-
-
-    <hr class="sidebar-divider">
-     <div class="sidebar-heading">
-        Accounting
-      </div>
 
      <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAccounting" aria-expanded="true" aria-controls="collapseAccounting">
@@ -151,13 +109,7 @@
         </div>
       </li>
 
-
-    <hr class="sidebar-divider">
-     <div class="sidebar-heading">
-        Reports
-      </div>
-
-     <li class="nav-item">
+     <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReports" aria-expanded="true" aria-controls="collapseReports">
           <i class="fas fa-fw fa-cog"></i>
           <span>Reports</span>
@@ -167,16 +119,9 @@
             <a class="collapse-item" href="buttons.html">Analytics</a>
           </div>
         </div>
-      </li>
+      </li> -->
 
-      <hr class="sidebar-divider">
-
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        System
-      </div>
-
-            <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSecurity" aria-expanded="true" aria-controls="collapseSecurity">
           <i class="fas fa-fw fa-cog"></i>
           <span>Security</span>
@@ -193,7 +138,7 @@
         </div>
       </li>
 
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSettings" aria-expanded="true" aria-controls="collapseSettings">
           <i class="fas fa-fw fa-cog"></i>
           <span>Settings</span>
@@ -205,8 +150,7 @@
             <a class="collapse-item" href="cards.html">Payment Terms</a>
           </div>
         </div>
-      </li>
-
+      </li> -->
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
