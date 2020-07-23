@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, APP_ID } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ThrowStmt } from '@angular/compiler';
@@ -26,6 +26,12 @@ export class AddCategoryComponent implements OnInit {
       categoryName: this.categoryName,
       catalogName: this.catelogName
     });
+  }
+  onSubmit(): void{
+    //Code to Submit to the API.
+  }
+  onReset(): void{
+    //Code to reset the form.
   }
   ngOnInit(): void {
   }
