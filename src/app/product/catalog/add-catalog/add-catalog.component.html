@@ -1,1 +1,27 @@
-<p>add-catalog works!</p>
+<!-- <p>add-catalog works!</p> -->
+<form novalidate [formGroup]="catalogForm" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="col-sm-6">
+          <label for="catalogName">Catalog Name</label>
+        </div>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="catalogName" formControlName="catalogName" >product
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-sm-6">
+        </div>
+        <div class="col-sm-6 floatt-right">
+          <input type="submit" value="Submit" class="btn btn-primary mr-2" />
+          <button class="btn btn-secondary">Discard</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <img class="img-profile" width="150" height="150" src="assets/img/placeholder.png">
+    </div>
+  </div>
+</form>
+<!-- <p>{{catalogName}}</p> -->

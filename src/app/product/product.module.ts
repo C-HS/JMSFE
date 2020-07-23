@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddAttributeComponent } from './attribute/add-attribute/add-attribute.component';
 import { EditAttributeComponent } from './attribute/edit-attribute/edit-attribute.component';
 import { ListAttributesComponent } from './attribute/list-attributes/list-attributes.component';
@@ -48,7 +49,9 @@ import { ViewUomComponent } from './uom/view-uom/view-uom.component';
     ViewUomComponent],
   imports: [
     CommonModule,
-    ProductRoutingModule
+    ProductRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class ProductModule { }
