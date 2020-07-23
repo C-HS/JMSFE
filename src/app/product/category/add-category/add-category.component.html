@@ -1,5 +1,5 @@
 <p>add-category works!</p>
-<!-- <form>
+<form novalidate [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
   <div class="row">
     <div class="col-sm-6">
       <div class="row">
@@ -7,7 +7,7 @@
           <label for="categoryName">Category Name</label>
         </div>
         <div class="col-sm-6">
-          <input type="text" class="form-control" id="categoryName">
+          <input type="text" class="form-control" id="categoryName" formControlName="categoryName">
         </div>
       </div>
       <div class="row">
@@ -15,7 +15,7 @@
           <label for="catalogName">Catalog Name</label>
         </div>
         <div class="col-sm-6">
-          <select class="form-control">
+          <select class="form-control" formControlName="catalogName">
             <option>Select Catalog</option>
             <option>CAT_001 GOLD</option>
             <option>CAT_002 SILVER</option>
@@ -29,7 +29,7 @@
         <div class="col-sm-6">
         </div>
         <div class="col-sm-6">
-          <button class="btn btn-primary mr-2">Save</button>
+          <input type="submit" value="Save" class="btn btn-primary mr-2">
           <button class="btn btn-secondary">Discard</button>
         </div>
       </div>
@@ -38,4 +38,4 @@
       <img class="img-profile" width="150" height="150" src="assets/img/placeholder.png">
     </div>
   </div>
-</form> -->
+</form>
