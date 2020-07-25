@@ -5,6 +5,16 @@
 		<li><a href="#">Home</a></li>
 		<li><a href="#">Library</a></li>
 		<li class="active"><span>Data</span></li>
-	</ol> -->
-  <router-outlet></router-outlet>
+  </ol> -->
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800"></h1>
+  </div>
+  <div class="card shadow">
+    <div class="card-header">
+      <h1 class="h3 mb-0 text-gray-800">{{header}}</h1>
+    </div>
+    <div class="card-body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
