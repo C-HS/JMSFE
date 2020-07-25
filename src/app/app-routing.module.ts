@@ -4,12 +4,22 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'employees', loadChildren: () => import('./employees/employees.module').then(m => m.EmployeesModule) },
-  { path: 'products', loadChildren: () => import('./product/product.module').then(m => m.ProductModule) },
-  { path: 'ordermgr', loadChildren: () => import('./order-management/order-management.module').then(m => m.OrderManagementModule) },
-  { path: 'companymgr', loadChildren: () => import('./company-management/company-management.module').then(m => m.CompanyManagementModule) },
+  { path: '', component: DashboardComponent,
+    data: { breadcrumb: 'Home'} },
+  { path: 'dashboard', component: DashboardComponent,
+    data: { breadcrumb: 'Dashboard'} },
+  { path: 'employees',
+    loadChildren: () => import('./employees/employees.module').then(m => m.EmployeesModule),
+    data: { breadcrumb: 'Employees'} },
+  { path: 'products',
+    loadChildren: () => import('./product/product.module').then(m => m.ProductModule),
+    data: { breadcrumb: 'Products'} },
+  { path: 'ordermgr',
+    loadChildren: () => import('./order-management/order-management.module').then(m => m.OrderManagementModule),
+    data: {breadcrumb: 'Order'} },
+  { path: 'companymgr',
+    loadChildren: () => import('./company-management/company-management.module').then(m => m.CompanyManagementModule),
+    data: { breadcrumb: 'Company'} },
 ];
 
 @NgModule({

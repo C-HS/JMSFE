@@ -6,12 +6,20 @@
 		<li><a href="#">Library</a></li>
 		<li class="active"><span>Data</span></li>
   </ol> -->
+
+  <!-- <xng-breadcrumb separator=">"></xng-breadcrumb> -->
+  <!-- <xng-breadcrumb [separator]="iconTemplate"></xng-breadcrumb>
+
+  <ng-template #iconTemplate>
+    <mat-icon>arrow_right</mat-icon>
+  </ng-template> -->
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800"></h1>
+    <!-- <h1 class="h3 mb-0 text-gray-800"></h1> -->
   </div>
   <div class="card shadow">
     <div class="card-header">
-      <h1 class="h3 mb-0 text-gray-800">{{header}}</h1>
+      <!-- <h1 class="h3 mb-0 text-gray-800">{{header}}</h1> -->
+      <xng-breadcrumb></xng-breadcrumb>
     </div>
     <div class="card-body">
       <router-outlet></router-outlet>
