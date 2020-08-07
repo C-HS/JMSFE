@@ -1,0 +1,92 @@
+1: GET all Catalogs
+
+Request [GET]  http://localhost:8011/product/getAllCatalogs
+
+Response
+
+[{
+	"catalogId": "1000",
+	"catalogName": "GOLD",
+	"catalogImage": "",
+	"description": "gold",
+	"createDatetime": "07-08-2020 12:13:50",
+	"status": "ACTIVE"
+}]
+----------------------------------------------------------------------------------------------------------------
+2: Get Catalog By catalogId
+
+Request [GET]  http://localhost:8011/product/getCatalog/{catalogId}
+
+Response
+
+{
+	"catalogId": "1000",
+	"catalogName": "GOLD",
+	"catalogImage": "",
+	"description": "gold",
+	"createDatetime": "07-08-2020 12:13:50",
+	"status": "ACTIVE"
+}
+
+----------------------------------------------------------------------------------------------------------------
+3: Create Catalog
+
+Request [POST]  http://localhost:8011/product/addCatalog
+
+
+{
+	"catalogId": "1000",
+	"catalogName": "GOLD",
+	"catalogImage": "",
+	"description": "gold",
+	"createDatetime": "",
+	"status": ""
+}
+
+Response
+
+{
+	"catalogId": "1000",
+	"catalogName": "GOLD",
+	"catalogImage": "",
+	"description": "gold",
+	"createDatetime": "07-08-2020 12:13:50",
+	"status": "ACTIVE"
+}
+----------------------------------------------------------------------------------------------------------------
+
+4: Update Catalog
+
+Request [PUT]  http://localhost:8011/product/updateCatalog
+
+
+{
+	"catalogId": "1000",
+	"catalogName": "GOLD",
+	"catalogImage": "",
+	"description": "gold",
+	"createDatetime": "07-08-2020 12:13:50",
+	"status": "ACTIVE"
+}
+
+Response
+
+{
+	"catalogId": "1000",
+	"catalogName": "GOLD",
+	"catalogImage": "",
+	"description": "gold",
+	"createDatetime": "07-08-2020 12:13:50",
+	"status": "ACTIVE"
+}
+----------------------------------------------------------------------------------------------------------------
+
+5: Delete Catalog By catalogId
+
+Request [DELETE]  http://localhost:8011/product/deleteCatalog/{catalogId}
+
+Response
+
+{
+	"response": "Record Deleted Successfully"
+}
