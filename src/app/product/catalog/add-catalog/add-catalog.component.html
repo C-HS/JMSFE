@@ -13,14 +13,26 @@
       <div class="row mt-2">
         <div class="col-sm-6">
         </div>
-        <div class="col-sm-6 floatt-right">
+        <div class="col-sm-6 float-right">
           <input type="submit" value="Submit" class="btn btn-primary mr-2" />
           <button class="btn btn-secondary" (click)="onReset()">Discard</button>
         </div>
       </div>
     </div>
     <div class="col-sm-6">
-      <img class="img-profile" width="150" height="150" src="assets/img/placeholder.png">
+      <img class="img-profile"
+           (click) = "selectFile.click()"
+           width="150"
+           height="150"
+           src="assets/img/placeholder.png"
+      >
+      <input style="display:none;"
+             type="file"
+             formControlName="file"
+             class="form-control"
+             (change)="onFileChange($event)"
+             #selectFile
+      >
     </div>
   </div>
 </form>
