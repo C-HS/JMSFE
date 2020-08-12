@@ -1,39 +1,32 @@
 <!-- <p>add-catalog works!</p> -->
-<form novalidate [formGroup]="catalogForm" (ngSubmit)="onSubmit()">
-  <div class="row">
+<form [formGroup]="catalogForm" (ngSubmit)="submit()">
+  <div class="row mt-2">
     <div class="col-sm-6">
-      <div class="row">
+      <div class="row mt-2">
         <div class="col-sm-6">
           <label for="catalogName">Catalog Name</label>
         </div>
         <div class="col-sm-6">
-          <input type="text" class="form-control" id="catalogName" formControlName="catalogName" >product
+          <input type="text" class="form-control" id="catalogName" formControlName="catalogName">
         </div>
       </div>
       <div class="row mt-2">
         <div class="col-sm-6">
+          <label for="catalogDesc">Description</label>
         </div>
-        <div class="col-sm-6 float-right">
-          <input type="submit" value="Submit" class="btn btn-primary mr-2" />
-          <button class="btn btn-secondary" (click)="onReset()">Discard</button>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="catalogDesc" formControlName="catalogDesc">
         </div>
       </div>
     </div>
     <div class="col-sm-6">
-      <img class="img-profile"
-           (click) = "selectFile.click()"
-           width="150"
-           height="150"
-           src="assets/img/placeholder.png"
-      >
-      <input style="display:none;"
-             type="file"
-             formControlName="file"
-             class="form-control"
-             (change)="onFileChange($event)"
-             #selectFile
-      >
+      <img class="img-profile  float-right" width="175" height="175" [src]="imageSrc">
+      <input type="file" class="form-control" id="file" (change)="onFileChange($event)" formControlName="file">
     </div>
+  </div>
+  <div class="row mt-2">
+    <input type="submit" class="btn btn-primary ml-2" value="Submit">
+    <input type="button" class="btn btn-secondary ml-2" value="Discard">
   </div>
 </form>
 <!-- <p>{{catalogName}}</p> -->
