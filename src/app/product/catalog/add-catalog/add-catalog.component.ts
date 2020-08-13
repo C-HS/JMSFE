@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { CatalogServiceService } from '../../../service/catalog-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-catalog',
@@ -16,7 +17,8 @@ export class AddCatalogComponent implements OnInit {
   fileToUpload: File = null;
   imageSrc: any = 'assets/img/placeholder.png';
  constructor(private httpClient: HttpClient,
-             private catalogService: CatalogServiceService){
+             private catalogService: CatalogServiceService,
+             private router: Router){
    this.catalogForm = new FormGroup({
       catalogName: new FormControl(''),
       catalogDesc: new FormControl(''),
@@ -48,6 +50,7 @@ export class AddCatalogComponent implements OnInit {
    fd.append('file', this.fileToUpload);
    this.catalogService.addCatalog(fd).subscribe((res) => {
      console.log(res);
-   });
+    });
+   this.router.navigateByUrl('/products/viewCatalog');
  }
 }
