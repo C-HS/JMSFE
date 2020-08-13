@@ -3,7 +3,10 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { CatalogServiceService } from '../../../service/catalog-service.service';
 import { Router } from '@angular/router';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8c94930518567dc8fc791c1d7034bffee239fb7a
 @Component({
   selector: 'app-add-catalog',
   templateUrl: './add-catalog.component.html',
@@ -51,6 +54,7 @@ export class AddCatalogComponent implements OnInit {
    this.catalogService.addCatalog(fd).subscribe((res) => {
      console.log(res);
     });
-   this.router.navigateByUrl('/products/viewCatalog');
+  //  this.router.navigateByUrl('/products/viewCatalog');
+    //  this.router.navigate(['/viewCatalog']);
  }
 }
