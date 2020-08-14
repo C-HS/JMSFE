@@ -9,14 +9,16 @@ import { Observable } from 'rxjs';
 export class CatalogServiceService {
   // headers = { 'Content-Type': 'multipart/form-data'};
   baseUrl: string = environment.baseUrl;
-  moduleUrl = `${this.baseUrl}/product`;
-  constructor(private httpClient: HttpClient) { }
+  moduleUrl = this.baseUrl + '/product';
+  constructor(private httpClient: HttpClient) {
+    console.log('ModuleURL: ' + this.moduleUrl);
+  }
   public addCatalog(formData: FormData): Observable<any>{
     console.log('Form Data' + formData.has('file'));
-    return this.httpClient.post(`${this.moduleUrl}/load`, formData);
+    return this.httpClient.post(this.moduleUrl + '/load', formData);
   }
   public getAllCatalg(): Observable<any>{
-    return this.httpClient.get(`${this.moduleUrl}/getAllCatalogs`);
+    return this.httpClient.get(`${this.moduleUrl}/getCatalogs`);
   }
   public getCatalog(id: number): Observable<any>{
     return this.httpClient.get(`${this.moduleUrl}/getCatalog/${id}`);
