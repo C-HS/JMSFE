@@ -1,11 +1,7 @@
-<!-- <p>view-catalog works!</p>
-{{catalogName}}
-<br/>
-{{catalogDesc}}
-<br/>
-{{status}}
-<img [src]="file" alt="Demo" class="img-profile" width="150" height="150"/> -->
-
+<div class="row float-right">
+  <a routerLink="/products/addCatalog" class="btn btn-primary mt-1 mb-1">Add More</a>
+  <a href="#" class="btn btn-secondary ml-2">Edit</a>
+</div>
 <div class="row mt-2">
     <div class="col-sm-6">
         <div class="row mt-2">
@@ -41,7 +37,7 @@
             </div>
         </div>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-6 float-right">
         <img [src]="file" alt="Demo" class="img-profile" width="150" height="150"/>
     </div>
 </div>

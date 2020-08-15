@@ -29,8 +29,7 @@ export class ViewCatalogComponent implements OnInit {
       this.createDatetime = res.createDatetime;
       this.file = 'data:image/png;base64,' + res.file;
     });
-    console.log('Requested Catalog:' + this.requestedCatalog);
-    console.log('Response Data from the server' + this.response);
+    // console.log('Requested Catalog:' + this.requestedCatalog);
+    // console.log('Response Data from the server' + this.response);
   }
-
 }

@@ -50,7 +50,7 @@ export class AddCatalogComponent implements OnInit {
    fd.append('catalog', JSON.stringify(this.catalogForm.value));
    fd.append('file', this.fileToUpload);
    this.catalogService.addCatalog(fd).subscribe((res) => {
-     console.log('Response CatalogId:' + res);
+     console.log('Response CatalogId:' + res.catalogId);
      this.catalogId = res;
      this.router.navigate([`/products/viewCatalog/${this.catalogId}`]);
     });

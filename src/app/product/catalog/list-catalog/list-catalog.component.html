@@ -1,9 +1,9 @@
-<a routerLink="/products/addCatalog" class="btn btn-primary">Add Catalog</a>
+<a routerLink="/products/addCatalog" class="btn btn-primary mt-1 mb-1">Add Catalog</a>
 <div class="table-responsive mt-2">
   <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="font-size: small;">
     <thead>
       <tr>
-        <!-- <th>S.No.</th> -->
+        <th>ID</th>
         <th>Name</th>
         <th>Description</th>
         <th>Date Created</th>
@@ -13,15 +13,15 @@
     </thead>
     <tbody>
       <tr *ngFor= "let count of catalogList | paginate: { itemsPerPage: 10, currentPage: p }; let i = index ">
-        <!-- <td>{{i+1}}</td> -->
+        <td>{{count.catalogId}}</td>
         <td>{{count.catalogName}}</td>
         <td>{{count.catalogDesc}}</td>
         <td>{{count.createDatetime | date}}</td>
         <td>{{count.status}}</td>
         <td>
-          <i class="fa fa-eye mr-3" style="font-size:24px;color:blue"></i>
-          <i class="fa fa-edit mr-3" style="font-size:24px;color:green"></i>
-          <i class="fa fa-trash mr-3" style="font-size:24px;color:red"></i>
+          <i class="fa fa-eye mr-3" (click)="viewCatalog(count.catalogId)" style="font-size:24px;color:blue"></i>
+          <i class="fa fa-edit mr-3" (click)="editCatalog(count.catalogId)" style="font-size:24px;color:green"></i>
+          <i class="fa fa-trash mr-3" (click)="deleteCatalog(count.catalogId)" style="font-size:24px;color:red"></i>
         </td>
       </tr>
     </tbody>
