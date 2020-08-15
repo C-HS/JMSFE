@@ -12,6 +12,7 @@ import { FooterComponent } from './ui/footer/footer.component';
 import { SidebarComponent } from './ui/sidebar/sidebar.component';
 import { TopbarComponent } from './ui/topbar/topbar.component';
 import { CompanyManagementModule } from './company-management/company-management.module';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CompanyManagementModule } from './company-management/company-management
     AppRoutingModule,
     EmployeesModule,
     CompanyManagementModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

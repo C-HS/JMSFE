@@ -7,12 +7,15 @@ import { CatalogServiceService } from '../../../service/catalog-service.service'
   styleUrls: ['./list-catalog.component.css']
 })
 export class ListCatalogComponent implements OnInit {
-
+  catalogList: any = {};
+  p = 1;
+  itemsPerPage: number;
   constructor(private catalogServie: CatalogServiceService) { }
 
   ngOnInit(): void {
     this.catalogServie.getAllCatalg().subscribe((res) => {
       console.log(res);
+      this.catalogList = res;
     });
   }
 

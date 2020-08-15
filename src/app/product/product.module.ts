@@ -22,6 +22,7 @@ import { ListUomComponent } from './uom/list-uom/list-uom.component';
 import { AddUomComponent } from './uom/add-uom/add-uom.component';
 import { EditUomComponent } from './uom/edit-uom/edit-uom.component';
 import { ViewUomComponent } from './uom/view-uom/view-uom.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -51,7 +52,8 @@ import { ViewUomComponent } from './uom/view-uom/view-uom.component';
     CommonModule,
     ProductRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule
   ]
 })
 export class ProductModule { }

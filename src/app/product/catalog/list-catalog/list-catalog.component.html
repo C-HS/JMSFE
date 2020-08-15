@@ -1,45 +1,32 @@
 <a routerLink="/products/addCatalog" class="btn btn-primary">Add Catalog</a>
-<div class="table-responsive">
+<div class="table-responsive mt-2">
   <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="font-size: small;">
     <thead>
       <tr>
-        <th>Select</th>
-        <th>Catalog ID</th>
+        <!-- <th>S.No.</th> -->
         <th>Name</th>
+        <th>Description</th>
         <th>Date Created</th>
+        <th>Status</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td><a href="view_catalog.html">CAT_001</a></td>
-        <td>GOLD</td>
-        <td>2011/04/25</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>CAT_002</td>
-        <td>SILVER</td>
-        <td>2011/07/25</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>CAT_003</td>
-        <td>DIAMOND</td>
-        <td>2009/01/12</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>CAT_004</td>
-        <td>PLATINIM</td>
-        <td>2012/03/29</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>CAT_005</td>
-        <td>ARTIFICIAL</td>
-        <td>2010/03/17</td>
+      <tr *ngFor= "let count of catalogList | paginate: { itemsPerPage: 10, currentPage: p }; let i = index ">
+        <!-- <td>{{i+1}}</td> -->
+        <td>{{count.catalogName}}</td>
+        <td>{{count.catalogDesc}}</td>
+        <td>{{count.createDatetime | date}}</td>
+        <td>{{count.status}}</td>
+        <td>
+          <i class="fa fa-eye mr-3" style="font-size:24px;color:blue"></i>
+          <i class="fa fa-edit mr-3" style="font-size:24px;color:green"></i>
+          <i class="fa fa-trash mr-3" style="font-size:24px;color:red"></i>
+        </td>
       </tr>
     </tbody>
+    <tfoot>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </tfoot>
   </table>
 </div>

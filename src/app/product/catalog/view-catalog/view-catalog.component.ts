@@ -13,6 +13,7 @@ export class ViewCatalogComponent implements OnInit {
   catalogName: string;
   catalogDesc: string;
   status: string;
+  createDatetime: Date;
   file;
   constructor(private route: ActivatedRoute,
               private catalogServie: CatalogServiceService) { }
@@ -22,13 +23,10 @@ export class ViewCatalogComponent implements OnInit {
       this.requestedCatalog = params.get('catalogId');
     });
     this.catalogServie.getCatalog(this.requestedCatalog).subscribe((res) => {
-      // this.response = res;
       this.catalogDesc = res.catalogDesc;
       this.catalogName = res.catalogName;
       this.status = res.status;
-      // this.file = new Blob(res.file, {type: 'application/png'});
-      // const reader = new FileReader();
-      // reader.readAsDataURL(new Blob(res.file));
+      this.createDatetime = res.createDatetime;
       this.file = 'data:image/png;base64,' + res.file;
     });
     console.log('Requested Catalog:' + this.requestedCatalog);

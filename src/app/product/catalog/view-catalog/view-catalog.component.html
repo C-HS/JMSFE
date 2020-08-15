@@ -1,7 +1,48 @@
-<p>view-catalog works!</p>
+<!-- <p>view-catalog works!</p>
 {{catalogName}}
 <br/>
 {{catalogDesc}}
 <br/>
 {{status}}
-<img [src]="file" alt="Demo" class="img-profile" width="150" height="150"/>
+<img [src]="file" alt="Demo" class="img-profile" width="150" height="150"/> -->
+
+<div class="row mt-2">
+    <div class="col-sm-6">
+        <div class="row mt-2">
+            <div class="col-sm-6">
+                <label for="catalogName"> Cataog Name</label>
+            </div>
+            <div class="col-sm-6">
+                {{catalogName}}
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-sm-6">
+                <label for="catalogName"> Cataog Description</label>
+            </div>
+            <div class="col-sm-6">
+                {{catalogDesc}}
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-sm-6">
+                <label for="catalogName"> Created At</label>
+            </div>
+            <div class="col-sm-6">
+                {{createDatetime}}
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-sm-6">
+                <label for="catalogName"> Status</label>
+            </div>
+            <div class="col-sm-6">
+                {{status}}
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <img [src]="file" alt="Demo" class="img-profile" width="150" height="150"/>
+    </div>
+</div>
+<!-- <div></div> -->
